@@ -1,5 +1,3 @@
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
@@ -22,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
