@@ -38,16 +38,12 @@ export default function Header() {
               href="https://neutralbase.com/"
               className="flex items-center space-x-2"
             >
-              <Image
-                src={Logo}
-                alt="RoseGold Logo"
-                className="h-8 w-auto hidden sm:block"
-              />
-              <Image
-                src={SoloLogo}
-                alt="RoseGold Logo"
-                className="h-8 w-auto sm:hidden visible"
-              />
+              <button className="bg-gradient-to-r from-blue-400 to-blue-700 text-white font-bold text-2xl px-3 py-1 rounded-lg">
+                V
+              </button>
+              <text className="text-clip bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent text-2xl font-bold px-2">
+                VibeDocs
+              </text>
             </Link>
 
             <button

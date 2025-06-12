@@ -53,8 +53,7 @@ export default function Hero() {
             {joinWaitList && (
               <div className="flex justify-center px-4 sm:px-0 opacity-100 transition-opacity ease-out duration-500">
                 <button className="relative inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-rose-gold-400 focus:ring-offset-2 focus:ring-offset-white">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme('colors.rose-gold.200')_0%,theme('colors.rose-gold.800')_50%,theme('colors.rose-gold.200')_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-6 sm:px-10 py-2 sm:py-4 text-base sm:text-lg font-bold text-rose-gold-200 backdrop-blur-3xl hover:text-rose-gold-100 transition-colors duration-300">
+                  <span className="inline-flex h-full w-full text-white bg-gradient-to-r from-blue-400 to-blue-700 cursor-pointer items-center justify-center rounded-full bg-white px-6 sm:px-10 py-2 sm:py-4 text-base sm:text-lg font-bold text-rose-gold-200 backdrop-blur-3xl hover:text-rose-gold-100 transition-colors duration-300">
                     Join Waitlist &rarr;
                   </span>
                 </button>
