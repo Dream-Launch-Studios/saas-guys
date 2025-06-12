@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function TabletDisplay() {
   return (
-    <div className="-mt-24 sm:-mt-48 mb-32 sm:mb-56 w-full bg-black relative flex items-center justify-center">
+    <div className="-mt-24 sm:-mt-48 mb-32 sm:mb-56 w-full bg-white relative flex items-center justify-center">
       {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
       
       <div className="relative w-full max-w-7xl mx-auto px-4">
         <div className="relative mx-auto max-w-5xl">

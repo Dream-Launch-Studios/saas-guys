@@ -16,8 +16,8 @@ import { OrbitingCirclesDemo } from "./oribiting-circle";
 
 export function BentoGridThirdDemo() {
   return (
-    <section className="relative bg-black py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffd7000a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
+    <section className="relative bg-white py-32">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffd7000a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_white,transparent_75%)]" />
       
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">
         <div className="h-[50rem] w-[50rem] bg-yellow-600/20 rounded-full blur-[128px]" />
@@ -28,7 +28,7 @@ export function BentoGridThirdDemo() {
         {/* Updated heading section */}
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-300 via-rose-gold-400 to-rose-gold-500">
-            Elevate Your Coding Experience with AIcodeKit
+            Elevate Your Coding Experience with VibeDocs
           </h2>
           <p className="text-lg md:text-xl text-rose-gold-100/90 max-w-2xl mx-auto">
             Harness the power of AI to enhance your coding efficiency and streamline your development process with our innovative code editor.
@@ -87,21 +87,21 @@ const SkeletonOne = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2  items-center space-x-2 bg-black"
+        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2  items-center space-x-2 bg-white"
       >
         <div className="h-6 w-6 rounded-full bg-gradient-to-br from-rose-gold-300 to-rose-gold-500 flex-shrink-0" />
         <div className="w-full h-4 rounded-full bg-rose-gold-900" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
+        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white"
       >
         <div className="w-full  h-4 rounded-full bg-rose-gold-900" />
         <div className="h-6 w-6 rounded-full bg-gradient-to-br from-rose-gold-300 to-rose-gold-500 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center space-x-2 bg-black"
+        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center space-x-2 bg-white"
       >
         <div className="h-6 w-6 rounded-full bg-gradient-to-br from-rose-gold-300 to-rose-gold-500 flex-shrink-0" />
         <div className="w-full  h-4 rounded-full bg-rose-gold-900" />
@@ -133,7 +133,7 @@ const SkeletonTwo = () => {
     //   initial="initial"
     //   animate="animate"
     //   whileHover="hover"
-    //   className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+    //   className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-white/[0.2] flex-col space-y-2"
     // >
     //   {arr.map((_, i) => (
     //     <motion.div
@@ -142,7 +142,7 @@ const SkeletonTwo = () => {
     //       style={{
     //         maxWidth: Math.random() * (100 - 40) + 40 + "%",
     //       }}
-    //       className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2  items-center space-x-2 bg-black w-full h-4"
+    //       className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2  items-center space-x-2 bg-white w-full h-4"
     //     ></motion.div>
     //   ))}
     // </motion.div>
@@ -192,7 +192,7 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl p-4 bg-black border-rose-gold-400/[0.2] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl p-4 bg-white border-rose-gold-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
           src="https://plus.unsplash.com/premium_photo-1678937608953-f4821e42dcdb?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -208,7 +208,7 @@ const SkeletonFour = () => {
           Starter
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-black border border-rose-gold-400/[0.3]  flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-white border border-rose-gold-400/[0.3]  flex flex-col items-center justify-center">
         <Image
           src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=3432&auto=format&fit=crop"
           alt="avatar"
@@ -225,7 +225,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl p-4 bg-black border-rose-gold-400/[0.2] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl p-4 bg-white border-rose-gold-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
           src="https://images.unsplash.com/photo-1542185400-f1c993ecbea2?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -274,11 +274,11 @@ const SkeletonFive = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-white/[0.2] flex-col space-y-2"
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-rose-gold-400/[0.2] p-2  items-start space-x-2 bg-black"
+        className="flex flex-row rounded-2xl border border-rose-gold-400/[0.2] p-2  items-start space-x-2 bg-white"
       >
         <Image
           src="https://plus.unsplash.com/premium_photo-1678937610952-94d467ca3b02?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -293,7 +293,7 @@ const SkeletonFive = () => {
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-autobg-black"
+        className="flex flex-row rounded-full border border-rose-gold-400/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-autobg-white"
       >
         <p className="text-xs text-rose-gold-400">Start Building Now</p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-br from-rose-gold-300 to-rose-gold-500 flex-shrink-0" />

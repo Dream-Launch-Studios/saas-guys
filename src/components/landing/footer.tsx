@@ -29,10 +29,10 @@ export default function Footer() {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "linear", duration: 0.5 }}
-      className="relative bg-black overflow-hidden w-full mt-4 md:mt-20 py-20 flex items-center"
+      className="relative bg-white overflow-hidden w-full mt-4 md:mt-20 py-20 flex items-center"
     >
       {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)] z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_white,transparent_75%)] z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#744836_0%,transparent_20%)] z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#744836_0%,transparent_20%)] z-10" />
 
@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-6">
               <Image src={Logo} alt="RoseGold Logo" className="h-8 w-auto" />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 text-xl font-semibold">
-                AiCodeKit
+                VibeDocs
               </span>
             </div>
             <motion.p
@@ -126,13 +126,13 @@ export default function Footer() {
               className="space-y-3 sm:space-y-4"
             >
               <a
-                href="mailto:support@AiCodeKit.com"
+                href="mailto:support@VibeDocs.com"
                 className="flex items-center gap-3 text-sm sm:text-base text-rose-gold-600 group transition-colors duration-300"
               >
                 <div className="p-1.5 sm:p-2 rounded-md bg-rose-gold-900/10 group-hover:bg-rose-gold-900/20 transition-colors duration-300">
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
-                support@AiCodeKit.com
+                support@VibeDocs.com
               </a>
               <a
                 href="tel:+919876543210"
@@ -157,7 +157,7 @@ export default function Footer() {
         >
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-gold-300/20 to-transparent" />
           <p className="text-center text-sm sm:text-base text-rose-gold-300">
-            &copy; {new Date().getFullYear()} AiCodeKit. All rights reserved.
+            &copy; {new Date().getFullYear()} VibeDocs. All rights reserved.
           </p>
         </motion.div>
       </div>

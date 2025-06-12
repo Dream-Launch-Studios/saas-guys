@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 sm:w-full">
       <div className="w-11/12 mx-auto px-4">
-        <div className="bg-black/40 backdrop-blur-md rounded-lg border border-rose-gold-300/20">
+        <div className="bg-white/40 backdrop-blur-md rounded-lg border border-rose-gold-300/20">
           <motion.div className="flex justify-between items-center h-14 px-4">
             <Link
               href="https://neutralbase.com/"
@@ -66,7 +66,7 @@ export default function Header() {
               className="hidden xl:flex items-center space-x-8"
             >
               {showDownloadButton && (
-                <button className="bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-black font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                <button className="bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
                   Join Waitlist
                 </button>
               )}
@@ -117,7 +117,7 @@ export default function Header() {
               </motion.div>
 
               {showDownloadButton && (
-                <button className="w-full bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-black font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
                   Join Waitlist
                 </button>
               )}

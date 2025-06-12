@@ -107,7 +107,7 @@ export const StickyScroll = () => {
   });
 
   return (
-    <div className="w-full bg-black relative overflow-hidden my-32 sm:my-52" ref={containerRef}>
+    <div className="w-full bg-white relative overflow-hidden my-32 sm:my-52" ref={containerRef}>
       <motion.div
         ref={ref}
         animate={controls}

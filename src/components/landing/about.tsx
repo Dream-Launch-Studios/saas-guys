@@ -17,14 +17,14 @@ export default function About() {
     },
     {
       title: "Seamless Integration",
-      description: "Works with Copilot, AiCodeKit, Cursor, and more",
+      description: "Works with Copilot, VibeDocs, Cursor, and more",
       delay: 0.3,
     },
   ];
 
   return (
-    <div className="w-full bg-black relative min-h-screen">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    <div className="w-full bg-white relative min-h-screen">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
       <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
         <GlowingStarsEffect>
           <div className="relative pt-20 pb-20">            

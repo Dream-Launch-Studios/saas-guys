@@ -10,7 +10,7 @@ import Workflows from "@/components/landing/workflows";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-black items-center justify-center min-h-screen w-full md:space-y-4">
+    <div className="flex flex-col bg-white items-center justify-center min-h-screen w-full md:space-y-4">
       <Header />
 
       <Hero />

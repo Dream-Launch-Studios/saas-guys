@@ -5,8 +5,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <div className="w-full bg-black relative mb-16">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    <div className="w-full bg-white relative mb-16">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
       <div className="max-w-7xl mx-auto px-4 py-20 relative">
         <div className="relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-gray-800">
           <div className="absolute inset-0 bg-gradient-to-r from-rose-400/10 to-rose-500/10 animate-pulse" />
