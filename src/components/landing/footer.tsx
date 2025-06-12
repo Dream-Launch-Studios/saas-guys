@@ -1,90 +1,170 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+"use client";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  Send,
+} from "lucide-react";
+import React, { useState } from "react";
+import Image from "next/image";
+import Logo from "@/public/logo.png";
+import { motion } from "framer-motion";
 
-const Footer = () => {
+export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle newsletter signup
+    console.log("Newsletter signup:", email);
+    setEmail("");
+  };
+
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-brand rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SG</span>
-              </div>
-              <span className="font-bold text-xl">SAAS Guys</span>
+    <motion.footer
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ ease: "linear", duration: 0.5 }}
+      className="relative bg-black overflow-hidden w-full mt-4 md:mt-20 py-20 flex items-center"
+    >
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)] z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#744836_0%,transparent_20%)] z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#744836_0%,transparent_20%)] z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-30">
+        {/* Grid layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+          {/* Company Info */}
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6">
+              <Image src={Logo} alt="RoseGold Logo" className="h-8 w-auto" />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 text-xl font-semibold">
+                AiCodeKit
+              </span>
             </div>
-            <p className="text-gray-400 mb-6">
-              Your AI companion for streamlined project documentation and development workflows.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+            <motion.p
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: "linear", duration: 0.5 }}
+              className="text-rose-gold-600 text-sm sm:text-base mb-6"
+            >
+              Transform your development workflow with AI-powered code and
+              documentation analysis.
+            </motion.p>
           </div>
 
-          {/* Product */}
+          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Templates</a></li>
+            <h4 className="font-semibold mb-4 text-base sm:text-lg bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-200 to-rose-gold-400  w-fit  text-rose-gold-600 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-rose-gold-600 after:transition-all after:duration-300 hover:after:w-full hover:after:rounded-full after:mt-2 pb-1">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 sm:space-y-3 ">
+              {["Features", "Pricing", "FAQ", "Support", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <motion.a
+                      initial={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ ease: "linear", duration: 0.5 }}
+                      href="#"
+                      className="text-sm sm:text-base text-rose-gold-600 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-rose-gold-600 after:transition-all after:duration-300 hover:after:w-full hover:after:rounded-full after:mt-2 pb-1"
+                    >
+                      {item}
+                    </motion.a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Features */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            <h4 className="font-semibold mb-4 text-base sm:text-lg bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-200 to-rose-gold-400  w-fit  text-rose-gold-600 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-rose-gold-600 after:transition-all after:duration-300 hover:after:w-full hover:after:rounded-full after:mt-2 pb-1">
+              Features
+            </h4>
+            <ul className="space-y-2 sm:space-y-3 ">
+              {[
+                "Code Analysis",
+                "AI Assistance",
+                "Documentation",
+                "Integrations",
+                "Collaboration",
+              ].map((item) => (
+                <li key={item}>
+                  <motion.a
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ ease: "linear", duration: 0.5 }}
+                    href="#"
+                    className="text-sm sm:text-base text-rose-gold-600 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-rose-gold-600 after:transition-all after:duration-300 hover:after:w-full hover:after:rounded-full after:mt-2 pb-1"
+                  >
+                    {item}
+                  </motion.a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Us */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API Reference</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Status</a></li>
-            </ul>
+            <h4 className="font-semibold mb-4 text-base sm:text-lg bg-clip-text text-transparent bg-gradient-to-r from-rose-gold-200 to-rose-gold-400">
+              Contact Us
+            </h4>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: "linear", duration: 0.5 }}
+              className="space-y-3 sm:space-y-4"
+            >
+              <a
+                href="mailto:support@AiCodeKit.com"
+                className="flex items-center gap-3 text-sm sm:text-base text-rose-gold-600 group transition-colors duration-300"
+              >
+                <div className="p-1.5 sm:p-2 rounded-md bg-rose-gold-900/10 group-hover:bg-rose-gold-900/20 transition-colors duration-300">
+                  <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
+                </div>
+                support@AiCodeKit.com
+              </a>
+              <a
+                href="tel:+919876543210"
+                className="flex items-center gap-3 text-sm sm:text-base text-rose-gold-600 group transition-colors duration-300"
+              >
+                <div className="p-1.5 sm:p-2 rounded-md bg-rose-gold-900/10 group-hover:bg-rose-gold-900/20 transition-colors duration-300">
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
+                </div>
+                +91 98765 43210
+              </a>
+            </motion.div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 SAAS Guys. All rights reserved.
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ y: "-100", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ ease: "linear", duration: 0.5 }}
+          className="relative mt-12 sm:mt-16 pt-8"
+        >
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-gold-300/20 to-transparent" />
+          <p className="text-center text-sm sm:text-base text-rose-gold-300">
+            &copy; {new Date().getFullYear()} AiCodeKit. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Cookie Policy
-            </a>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </footer>
-  );
-};
 
-export default Footer;
+      {/* Decorative elements */}
+      <div className="absolute -left-28 -bottom-32 w-48 sm:w-64 h-48 sm:h-64 bg-rose-gold-400 rounded-full filter blur-[96px] sm:blur-[128px] opacity-10" />
+      <div className="absolute -right-32 -top-32 w-48 sm:w-64 h-48 sm:h-64 bg-rose-gold-400 rounded-full filter blur-[96px] sm:blur-[128px] opacity-10" />
+    </motion.footer>
+  );
+}

@@ -1,82 +1,56 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, FileText, Zap, Code, Users, Download } from "lucide-react";
+"use client";
+import Image from "next/image";
+import React from "react";
+import { WobbleCard } from "@/components/wobble-card";
 
-const Features = () => {
-  const features = [
-    {
-      icon: <Zap className="w-8 h-8 text-sky-500" />,
-      title: "Project Creation Wizard",
-      description: "Step-by-step guided setup interface that helps you define core features and project goals with AI assistance."
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-blue-500" />,
-      title: "AI Documentation Generator",
-      description: "Generate comprehensive PRDs, technical specs, architecture diagrams, and user flows automatically."
-    },
-    {
-      icon: <Bot className="w-8 h-8 text-cyan-500" />,
-      title: "Meet Codie - Your AI Assistant",
-      description: "Interactive chatbot powered by Google's Gemini API to refine documents and answer questions in real-time."
-    },
-    {
-      icon: <Code className="w-8 h-8 text-blue-600" />,
-      title: "AI Tools Integration",
-      description: "Seamless integration with popular AI development tools like Claude, Copilot, Cursor, and Replit."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-sky-600" />,
-      title: "Starter Kit Library",
-      description: "Access pre-configured project templates with best practices for AI-assisted development."
-    },
-    {
-      icon: <Download className="w-8 h-8 text-cyan-600" />,
-      title: "Export & Share",
-      description: "Download your documentation as Markdown, PDF, or HTML. Share with stakeholders effortlessly."
-    }
-  ];
-
+export function Features() {
   return (
-    <section id="features" className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 relative">
-      {/* Micro gradients */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-100/10 to-transparent"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-500 bg-clip-text text-transparent">
-              Powerful Features
-            </span>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px] bg-gray-900"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-rose-gold-700">
+            AI Code Chunking: Transform Repos to Markdown
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to create comprehensive project documentation with AI assistance
+          <p className="mt-4 text-left text-base/6 text-rose-gold-200">
+            Effortlessly convert your entire codebase into markdown, pinpointing the most crucial chunks that elevate your prompts.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 border-blue-100/50 hover:border-blue-200 bg-gradient-to-br from-white/90 to-white/60 backdrop-blur-sm hover:scale-105"
-            >
-              <CardHeader>
-                <div className="mb-4 p-3 rounded-xl bg-gradient-to-br from-blue-50/80 to-cyan-50/80 backdrop-blur-sm w-fit group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                  {feature.icon}
-                </div>
-                <CardTitle className="text-xl font-semibold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+        <Image
+          src="https://code.visualstudio.com/assets/home/home-screenshot-copilot.png"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[40%] filter -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gray-950">
+        <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-rose-gold-600">
+          AI Docs Chunking: Streamline Your Documentation
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left text-base/6 text-rose-gold-200">
+          Convert your documentation into markdown and rerun to fetch the latest files, ensuring you always have the most valuable information at your fingertips.
+        </p>
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] bg-gray-950">
+        <div className="max-w-sm">
+          <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-rose-gold-700">
+            Future Features: Dependency Chain Analysis
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left text-base/6 text-rose-gold-200">
+            Trace all related dependencies when selecting a file or function, providing context for modifications and ensuring you have the complete picture.
+          </p>
         </div>
-      </div>
-    </section>
+        <Image
+          src="https://code.visualstudio.com/assets/home/swimlane-customized.png"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-5 md:-right-[50%] lg:-right-[2%] -bottom-5 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+    </div>
   );
-};
-
-export default Features;
+}

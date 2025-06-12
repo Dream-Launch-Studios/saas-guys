@@ -1,89 +1,130 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Logo from "@/public/Link.png";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import SoloLogo from "@/public/logo.png";
+import { motion } from "framer-motion";
+import { ItemVariants, LinksVariants, modalVariants } from "@/utils/variants";
 
-const Header = () => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showDownloadButton, setShowDownloadButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        // Assuming hero.tsx is around 500px from the top
+        setShowDownloadButton(true);
+      } else {
+        setShowDownloadButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-md border-b border-white/20 shadow-lg">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-brand rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-sm">SG</span>
-            </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-500 bg-clip-text text-transparent">
-              SAAS Guys
-            </span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Features
-            </a>
-            <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Pricing
-            </a>
-            <a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              FAQ
-            </a>
-            <Button 
-              variant="outline" 
-              className="border-blue-200 hover:bg-blue-50 bg-white/80 backdrop-blur-sm"
+    <nav className="fixed top-6 left-0 right-0 z-50 sm:w-full">
+      <div className="w-11/12 mx-auto px-4">
+        <div className="bg-black/40 backdrop-blur-md rounded-lg border border-rose-gold-300/20">
+          <motion.div className="flex justify-between items-center h-14 px-4">
+            <Link
+              href="https://neutralbase.com/"
+              className="flex items-center space-x-2"
             >
-              Sign In
-            </Button>
-            <Button className="bg-gradient-brand hover:opacity-90 text-white shadow-lg">
-              Join Waitlist
-            </Button>
-          </nav>
+              <Image
+                src={Logo}
+                alt="RoseGold Logo"
+                className="h-8 w-auto hidden sm:block"
+              />
+              <Image
+                src={SoloLogo}
+                alt="RoseGold Logo"
+                className="h-8 w-auto sm:hidden visible"
+              />
+            </Link>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
+              className="xl:hidden p-2 text-rose-gold-200 hover:text-rose-gold-100 transition-all"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
-          </div>
-        </div>
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/20 bg-white/95 backdrop-blur-md">
-            <nav className="flex flex-col space-y-4">
-              <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+            <motion.div
+              variants={LinksVariants}
+              className="hidden xl:flex items-center space-x-8"
+            >
+              {showDownloadButton && (
+                <button className="bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-black font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                  Join Waitlist
+                </button>
+              )}
+              <a
+                href="#features"
+                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
+              >
                 Features
               </a>
-              <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                Pricing
+              <a
+                href="#testimonials"
+                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
+              >
+                Testimonials
               </a>
-              <a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                FAQ
-              </a>
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button 
-                  variant="outline" 
-                  className="border-blue-200 hover:bg-blue-50 bg-white/80 backdrop-blur-sm"
-                >
-                  Sign In
-                </Button>
-                <Button className="bg-gradient-brand hover:opacity-90 text-white shadow-lg">
-                  Join Waitlist
-                </Button>
-              </div>
-            </nav>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-};
+            </motion.div>
+          </motion.div>
 
-export default Header;
+          {isMenuOpen && (
+            <motion.div
+              variants={modalVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="xl:hidden border-t border-rose-gold-300/20 py-4 px-4 space-y-4 h-96 flex items-center flex-col justify-center"
+            >
+              <motion.div
+                className="space-y-4"
+                variants={LinksVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <motion.a
+                  variants={ItemVariants}
+                  href="#features"
+                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium "
+                >
+                  Features
+                </motion.a>
+                <motion.a
+                  variants={ItemVariants}
+                  href="#testimonials"
+                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium hover:italic"
+                >
+                  Testimonials
+                </motion.a>
+              </motion.div>
+
+              {showDownloadButton && (
+                <button className="w-full bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-black font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                  Join Waitlist
+                </button>
+              )}
+            </motion.div>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+}
