@@ -29,15 +29,14 @@ export default function Hero() {
         <div className="flex flex-col gap-12">
           <div className="mx-auto max-w-3xl text-center space-y-8">
             <div className="space-y-4">
-              <div className="mb-0 text-center  ">
+              <div className="mb-0 text-center">
                 <Button
                   variant="ghost"
-                  className=" rounded-full bg-white/40 backdrop-blur-md border border-rose-gold-300/20 text-rose-gold-200 hover:bg-rose-gold-900/20 hover:text-rose-gold-100 transition-all duration-300 text-xs sm:text-sm px-4 py-2"
+                  className="rounded-full bg-white/40 backdrop-blur-md border border-rose-gold-300/20 text-rose-gold-200 hover:bg-rose-gold-900/20 hover:text-rose-gold-100 transition-all duration-300 text-xs sm:text-sm px-4 py-2"
                 >
-                  Transform full repos and docs into markdown effortlessly
+                  Generate comprehensive documentation with AI assistance
                   <text className="hidden sm:block">
-                    ,pinpointing the crucial chunks that elevate your prompts!
-                    🚀
+                    , from PRDs to technical specs in minutes! 🚀
                   </text>
                 </Button>
               </div>
@@ -46,7 +45,7 @@ export default function Hero() {
                   VibeDocs<span className="sm:visible hidden">:</span>{" "}
                 </text>
                 <span className="font-thin italic text-black">
-                  Your Open Source AI Code & Docs Chunking Editor
+                  Your AI-Powered Documentation Assistant
                 </span>
               </h1>
             </div>
@@ -54,7 +53,7 @@ export default function Hero() {
               <div className="flex justify-center px-4 sm:px-0 opacity-100 transition-opacity ease-out duration-500">
                 <button className="relative inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-rose-gold-400 focus:ring-offset-2 focus:ring-offset-white">
                   <span className="inline-flex h-full w-full text-white bg-gradient-to-r from-blue-400 to-blue-700 cursor-pointer items-center justify-center rounded-full bg-white px-6 sm:px-10 py-2 sm:py-4 text-base sm:text-lg font-bold text-rose-gold-200 backdrop-blur-3xl hover:text-rose-gold-100 transition-colors duration-300">
-                    Join Waitlist &rarr;
+                    Get Started Free &rarr;
                   </span>
                 </button>
               </div>

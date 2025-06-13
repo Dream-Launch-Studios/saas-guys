@@ -4,9 +4,16 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Next MVP Template",
-  description: "A template for building a MVP with Next.js, Tailwind CSS, and Prisma with Shadcn/UI",
+  title: "VibeDocs - AI-Powered Documentation Assistant",
+  description: "Streamline your project documentation with AI. Generate PRDs, technical specs, and more with our intelligent documentation assistant.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  keywords: ["AI documentation", "PRD generator", "technical documentation", "project planning", "AI assistant"],
+  authors: [{ name: "VibeDocs Team" }],
+  openGraph: {
+    title: "VibeDocs - AI-Powered Documentation Assistant",
+    description: "Streamline your project documentation with AI. Generate PRDs, technical specs, and more with our intelligent documentation assistant.",
+    type: "website",
+  },
 };
 
 const geist = Geist({

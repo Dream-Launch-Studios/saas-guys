@@ -35,7 +35,7 @@ export default function Header() {
         <div className="bg-white/40 backdrop-blur-md rounded-lg border border-rose-gold-300/20">
           <motion.div className="flex justify-between items-center h-14 px-4">
             <Link
-              href="https://neutralbase.com/"
+              href="/"
               className="flex items-center space-x-2"
             >
               <button className="bg-gradient-to-r from-blue-400 to-blue-700 text-white font-bold text-2xl px-3 py-1 rounded-lg">
@@ -62,8 +62,8 @@ export default function Header() {
               className="hidden xl:flex items-center space-x-8"
             >
               {showDownloadButton && (
-                <button className="bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
-                  Join Waitlist
+                <button className="bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue-500 hover:to-blue-800 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                  Get Started Free
                 </button>
               )}
               <a
@@ -71,6 +71,12 @@ export default function Header() {
                 className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
               >
                 Features
+              </a>
+              <a
+                href="#pricing"
+                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
+              >
+                Pricing
               </a>
               <a
                 href="#testimonials"
@@ -99,22 +105,29 @@ export default function Header() {
                 <motion.a
                   variants={ItemVariants}
                   href="#features"
-                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium "
+                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
                 >
                   Features
                 </motion.a>
                 <motion.a
                   variants={ItemVariants}
+                  href="#pricing"
+                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
+                >
+                  Pricing
+                </motion.a>
+                <motion.a
+                  variants={ItemVariants}
                   href="#testimonials"
-                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium hover:italic"
+                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
                 >
                   Testimonials
                 </motion.a>
               </motion.div>
 
               {showDownloadButton && (
-                <button className="w-full bg-gradient-to-r from-rose-gold-200 to-rose-gold-400 hover:from-rose-gold-300 hover:to-rose-gold-500 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
-                  Join Waitlist
+                <button className="w-full bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue-500 hover:to-blue-800 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
+                  Get Started Free
                 </button>
               )}
             </motion.div>

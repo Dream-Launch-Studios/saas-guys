@@ -11,26 +11,23 @@ export default function Workflows() {
         <div className="pb-6 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-rose-gold-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-rose-gold-200/50">
-              <span className="inline-flex bg-gradient-to-r from-rose-gold-500 to-rose-gold-200 bg-clip-text text-transparent">
-                AI Code Editor
+            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-200/50">
+              <span className="inline-flex bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+                AI Documentation Assistant
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.rose-gold.200),theme(colors.gray.50),theme(colors.rose-gold.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Enhance Your Coding Experience
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.blue.200),theme(colors.gray.50),theme(colors.blue.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              Streamline Your Documentation Process
             </h2>
-            <p className="text-lg text-rose-gold-200/65">
-              Experience a powerful AI-driven code editor that helps you write,
-              debug, and optimize your code effortlessly. Collaborate with your
-              team in real-time and integrate seamlessly with your development
-              workflow.
+            <p className="text-lg text-gray-600">
+              Experience a powerful AI-driven documentation assistant that helps you create, manage, and optimize your project documentation effortlessly. Collaborate with your team in real-time and integrate seamlessly with your development workflow.
             </p>
           </div>
           {/* Spotlight items */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
             {/* Card 1 */}
             <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-rose-gold-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-rose-gold-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-rose-gold-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
+              className="group/card relative h-full overflow-hidden rounded-2xl bg-blue-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-blue-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-blue-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-white after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
@@ -57,27 +54,26 @@ export default function Workflows() {
                   src={WorflowImg01}
                   width={350}
                   height={288}
-                  alt="AI Code Editor Feature 1"
+                  alt="AI Documentation Feature 1"
                 />
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-white px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-white">
-                      <span className="bg-gradient-to-r from-rose-gold-500 to-rose-gold-200 bg-clip-text text-transparent">
-                        Smart Suggestions
+                      <span className="bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+                        PRD Generator
                       </span>
                     </span>
                   </div>
-                  <p className="text-rose-gold-200/65">
-                    Leverage AI to get real-time code suggestions and improve
-                    your coding efficiency.
+                  <p className="text-gray-600">
+                    Generate comprehensive Product Requirement Documents with AI assistance, saving hours of manual work.
                   </p>
                 </div>
               </div>
             </a>
             {/* Card 2 */}
             <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-rose-gold-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-rose-gold-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-rose-gold-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
+              className="group/card relative h-full overflow-hidden rounded-2xl bg-blue-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-blue-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-blue-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-white after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
@@ -104,27 +100,26 @@ export default function Workflows() {
                   src={WorflowImg02}
                   width={350}
                   height={288}
-                  alt="AI Code Editor Feature 2"
+                  alt="AI Documentation Feature 2"
                 />
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-white px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-white">
-                      <span className="bg-gradient-to-r from-rose-gold-500 to-rose-gold-200 bg-clip-text text-transparent">
-                        Instant Debugging
+                      <span className="bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+                        Technical Specs
                       </span>
                     </span>
                   </div>
-                  <p className="text-rose-gold-200/65">
-                    Quickly identify and fix errors in your code with AI-powered
-                    debugging tools.
+                  <p className="text-gray-600">
+                    Create detailed technical specifications with AI-powered suggestions and best practices.
                   </p>
                 </div>
               </div>
             </a>
             {/* Card 3 */}
             <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-rose-gold-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-rose-gold-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-rose-gold-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
+              className="group/card relative h-full overflow-hidden rounded-2xl bg-blue-300/20 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-blue-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-blue-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100"
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-white after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
@@ -151,20 +146,19 @@ export default function Workflows() {
                   src={WorflowImg03}
                   width={350}
                   height={288}
-                  alt="AI Code Editor Feature 3"
+                  alt="AI Documentation Feature 3"
                 />
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-white px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-white">
-                      <span className="bg-gradient-to-r from-rose-gold-500 to-rose-gold-200 bg-clip-text text-transparent">
-                        Collaborative Coding
+                      <span className="bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+                        Team Collaboration
                       </span>
                     </span>
                   </div>
-                  <p className="text-rose-gold-200/65">
-                    Work together with your team in real-time, sharing insights
-                    and code snippets effortlessly.
+                  <p className="text-gray-600">
+                    Work together with your team in real-time, sharing and reviewing documentation with ease.
                   </p>
                 </div>
               </div>

@@ -13,51 +13,51 @@ import {
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "AI-First Development",
+      title: "AI Documentation Generation",
       description:
-        "Leverage cutting-edge AI technology to automate code analysis and documentation generation, reducing development time by up to 40%.",
+        "Generate comprehensive documentation, PRDs, and technical specs with our advanced AI assistant, saving hours of manual work.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Cost Efficiency",
+      title: "Smart Version Control",
       description:
-        "Reduce development costs by automating repetitive tasks and streamlining documentation processes, leading to faster project delivery.",
+        "Keep documentation in sync with your codebase through intelligent versioning and automated updates.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Team Productivity",
+      title: "Team Collaboration",
       description:
-        "Empower your development team with AI-powered tools that enhance collaboration and accelerate the development lifecycle.",
+        "Enable real-time collaboration on documentation with built-in commenting, reviewing, and approval workflows.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "Quality Assurance",
+      title: "Project Analysis",
       description:
-        "Maintain high code quality with automated analysis and documentation, ensuring consistent standards across your projects.",
+        "Automatically analyze project structure and dependencies to generate accurate and up-to-date documentation.",
       icon: <IconCloud />,
     },
     {
-      title: "Scalable Solution",
+      title: "Custom Templates",
       description:
-        "Easily scale your development operations with a platform that grows with your team and adapts to your changing needs.",
+        "Create and use custom documentation templates to maintain consistency across projects and teams.",
       icon: <IconRouteAltLeft />,
     },
     {
-      title: "ROI Optimization",
+      title: "Integration Ready",
       description:
-        "Maximize return on investment with reduced development time, improved code quality, and enhanced team productivity.",
+        "Seamlessly integrate with your existing tools and workflows through our comprehensive API and plugins.",
       icon: <IconHelp />,
     },
     {
-      title: "Security First",
+      title: "Security & Privacy",
       description:
-        "Keep your code secure with local processing and encrypted data handling. Your intellectual property stays protected at all times.",
+        "Enterprise-grade security with local processing and encrypted data handling to protect your intellectual property.",
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "24/7 Support",
+      title: "Expert Support",
       description:
-        "Access round-the-clock technical support and comprehensive documentation to ensure smooth implementation and operation.",
+        "Access to dedicated support team and comprehensive documentation to ensure smooth implementation.",
       icon: <IconHeart />,
     },
   ];
@@ -90,17 +90,17 @@ const Feature = ({
       )}
     >
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-rose-gold-300 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-blue-300 to-transparent pointer-events-none" />
       )}
       {index >= 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-rose-gold-300 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-blue-300 to-transparent pointer-events-none" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-rose-200">
+      <div className="mb-4 relative z-10 px-10 text-blue-200">
         {icon}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-rose-gold-400 group-hover/feature:bg-rose-gold-200 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-rose-gold-300">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-blue-400 group-hover/feature:bg-blue-200 transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-blue-300">
           {title}
         </span>
       </div>

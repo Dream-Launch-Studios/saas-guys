@@ -1,22 +1,23 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/landing/marquee";
+
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's truly amazing. I love it. The way it seamlessly integrates with my workflow is incredible.",
+    name: "Sarah Chen",
+    username: "@sarahchen",
+    body: "VibeDocs has revolutionized how we handle project documentation. The AI-powered PRD generation saves us hours of work, and the technical specs are always spot-on. A game-changer for our development team!",
     img: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is truly amazing. The level of detail and care put into this is unparalleled.",
+    name: "Michael Rodriguez",
+    username: "@mikerod",
+    body: "As a technical lead, I've tried many documentation tools, but VibeDocs stands out. The AI assistant understands our requirements perfectly and generates comprehensive documentation that actually makes sense to our team.",
     img: "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=2417&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is truly amazing. I love it. The user interface is so intuitive and easy to use. ",
+    name: "Emma Thompson",
+    username: "@emmathompson",
+    body: "The team collaboration features in VibeDocs are incredible. We can now generate, review, and iterate on documentation in real-time. It's like having an AI documentation expert on our team!",
     img: "https://plus.unsplash.com/premium_photo-1691784781482-9af9bce05096?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
@@ -38,8 +39,8 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-40 xl:max-w-96 md:max-w-56  cursor-pointer overflow-hidden rounded-xl border p-4",
-        "border-rose-gold-500 bg-gray-50/[.10] hover:bg-gray-50/[.15]"
+        "relative h-40 xl:max-w-96 md:max-w-56 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "border-blue-500 bg-gray-50/[.10] hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -74,7 +75,7 @@ const ReviewCard = ({
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="h-4 w-4 text-sky-500 fill-sky-500"
+            className="h-4 w-4 text-blue-500 fill-blue-500"
           >
             <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
           </svg>
@@ -89,14 +90,14 @@ export default function Testimonials() {
   return (
     <div className="flex flex-col items-center justify-center mt-4 md:mt-20">
       <div className="text-center px-10 sm:mx-0">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-rose-gold-400 to-rose-gold-600 bg-clip-text text-transparent">
-          Loved by Thousands of Users ✨
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent">
+          Trusted by Development Teams Worldwide ✨
         </h2>
         <p className="mt-4 text-lg text-gray-400">
-          See what our community has to say about their experience &rarr;
+          See how VibeDocs is transforming documentation workflows &rarr;
         </p>
       </div>
-      <div className="my-20 relative flex h-[500px] sm:w-fit items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl ">
+      <div className="my-20 relative flex h-[500px] sm:w-fit items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
         <Marquee pauseOnHover vertical className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
