@@ -28,7 +28,7 @@ const Pricing = () => {
     <section id="pricing" className="py-16 md:py-24">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center px-3 py-1 mb-4 text-sm rounded-full bg-vibedocs-primary/10 text-vibedocs-primary border border-vibedocs-primary/20">
+          <div className="inline-flex items-center justify-center px-3 py-1 mb-4 text-sm rounded-full bg-blue-600/10 text-blue-600 border border-blue-600/20">
             Pricing
           </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
@@ -49,7 +49,7 @@ const Pricing = () => {
               </div>
               <p className="text-gray-600 mb-6">Perfect for individual developers and small projects.</p>
               
-              <Button asChild size="lg" variant="outline" className="w-full border-vibedocs-primary text-vibedocs-primary hover:bg-vibedocs-light">
+              <Button asChild size="lg" variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-100">
                 <Link href="#waitlist">Join Waitlist</Link>
               </Button>
             </div>
@@ -60,8 +60,8 @@ const Pricing = () => {
                   {starterFeatures.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <div className="mr-3 mt-0.5">
-                        <div className="h-5 w-5 rounded-full bg-vibedocs-primary/10 flex items-center justify-center">
-                          <Check className="h-3 w-3 text-vibedocs-primary" />
+                        <div className="h-5 w-5 rounded-full bg-blue-600/10 flex items-center justify-center">
+                          <Check className="h-3 w-3 text-blue-600" />
                         </div>
                       </div>
                       <span className="text-gray-600 text-sm">{feature}</span>
@@ -72,8 +72,8 @@ const Pricing = () => {
             </div>
           </Card>
           
-          <Card className="border-2 border-vibedocs-primary overflow-hidden relative bg-gradient-to-br from-white to-vibedocs-light/30">
-            <div className="absolute top-0 right-0 bg-vibedocs-primary text-white text-xs px-3 py-1 rounded-bl-lg font-medium">
+          <Card className="border-2 border-blue-600 overflow-hidden relative bg-gradient-to-br from-white to-blue-100/30">
+            <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs px-3 py-1 rounded-bl-lg font-medium">
               MOST POPULAR
             </div>
             
@@ -82,11 +82,11 @@ const Pricing = () => {
               <div className="flex items-baseline mb-4">
                 <span className="text-4xl font-bold">$49</span>
                 <span className="text-gray-500 ml-2">/month</span>
-                <span className="ml-3 text-sm text-vibedocs-primary bg-vibedocs-light px-2 py-1 rounded-full">40% off first year</span>
+                <span className="ml-3 text-sm text-blue-600 bg-blue-100 px-2 py-1 rounded-full">40% off first year</span>
               </div>
               <p className="text-gray-600 mb-6">For teams and professionals who need advanced features and unlimited usage.</p>
               
-              <Button asChild size="lg" className="w-full bg-vibedocs-primary hover:bg-vibedocs-accent">
+              <Button asChild size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
                 <Link href="#waitlist">Join Waitlist</Link>
               </Button>
             </div>
@@ -97,8 +97,8 @@ const Pricing = () => {
                   {proFeatures.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <div className="mr-3 mt-0.5">
-                        <div className="h-5 w-5 rounded-full bg-vibedocs-primary/10 flex items-center justify-center">
-                          <Check className="h-3 w-3 text-vibedocs-primary" />
+                        <div className="h-5 w-5 rounded-full bg-blue-600/10 flex items-center justify-center">
+                          <Check className="h-3 w-3 text-blue-600" />
                         </div>
                       </div>
                       <span className={`text-sm ${index === 0 ? 'font-medium text-gray-900' : 'text-gray-600'}`}>
@@ -114,7 +114,7 @@ const Pricing = () => {
         
         <div className="max-w-3xl mx-auto mt-16 text-center">
           <p className="text-sm text-gray-500 mb-8">
-            Need a custom enterprise solution? <Link href="#" className="text-vibedocs-primary underline">Contact us</Link> for pricing and features.
+            Need a custom enterprise solution? <Link href="#" className="text-blue-600 underline">Contact us</Link> for pricing and features.
           </p>
           
           <div className="bg-gray-50 p-8 rounded-xl">

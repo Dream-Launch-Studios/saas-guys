@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-7 w-7 rounded-full bg-gradient-to-br from-vibedocs-primary to-vibedocs-accent flex items-center justify-center">
+              <div className="h-7 w-7 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">V</span>
               </div>
               <span className="font-bold text-xl">Vibedocs</span>
@@ -19,13 +19,13 @@ const Footer = () => {
               AI-powered documentation platform for coding projects. Streamline your development workflow with intelligent docs.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-500 hover:text-vibedocs-primary transition-colors">
+              <Link href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-vibedocs-primary transition-colors">
+              <Link href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-vibedocs-primary transition-colors">
+              <Link href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>
@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {["Features", "Pricing", "Integrations", "API", "Roadmap"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-gray-600 hover:text-vibedocs-primary transition-colors">
+                  <Link href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                   </Link>
                 </li>
               ))}
@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {["Documentation", "Guides", "Templates", "Blog", "Community"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-gray-600 hover:text-vibedocs-primary transition-colors">
+                  <Link href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                   </Link>
                 </li>
               ))}
@@ -60,7 +60,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {["About", "Careers", "Privacy Policy", "Terms of Service", "Contact"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-gray-600 hover:text-vibedocs-primary transition-colors">
+                  <Link href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                   </Link>
                 </li>
               ))}
@@ -73,13 +73,13 @@ const Footer = () => {
             © {currentYear} Vibedocs. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <Link href="#" className="text-sm text-gray-500 hover:text-vibedocs-primary transition-colors">
+            <Link href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Privacy
             </Link>
-            <Link href="#" className="text-sm text-gray-500 hover:text-vibedocs-primary transition-colors">
+            <Link href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Terms
             </Link>
-            <Link href="#" className="text-sm text-gray-500 hover:text-vibedocs-primary transition-colors">
+            <Link href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Cookies
             </Link>
           </div>

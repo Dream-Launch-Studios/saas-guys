@@ -25,7 +25,7 @@ const Waitlist = () => {
   };
 
   return (
-    <section id="waitlist" className="py-16 md:py-24 bg-gradient-to-br from-vibedocs-primary to-vibedocs-accent">
+    <section id="waitlist" className="py-16 md:py-24 bg-gradient-to-br from-blue-600 to-blue-700">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div className="mb-8">
@@ -73,7 +73,7 @@ const Waitlist = () => {
                   <Button 
                     type="submit" 
                     disabled={isLoading}
-                    className="w-full bg-white text-vibedocs-primary hover:bg-gray-100 font-semibold"
+                    className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
                   >
                     {isLoading ? "Joining..." : "Join Waitlist"}
                   </Button>

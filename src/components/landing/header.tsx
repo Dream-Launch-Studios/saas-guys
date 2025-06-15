@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between mx-auto max-w-[1280px]">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Image 
@@ -24,16 +24,16 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6 ml-10">
-            <Link href="#features" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+            <Link href="#features" className="text-sm font-medium transition-colors hover:text-blue-600">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+            <Link href="#how-it-works" className="text-sm font-medium transition-colors hover:text-blue-600">
               How It Works
             </Link>
-            <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+            <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-blue-600">
               Pricing
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+            <Link href="#" className="text-sm font-medium transition-colors hover:text-blue-600">
               Documentation
             </Link>
           </nav>
@@ -43,7 +43,7 @@ const Header = () => {
           <Button variant="ghost" asChild>
             <Link href="#">Sign In</Link>
           </Button>
-          <Button asChild className="bg-vibedocs-primary hover:bg-vibedocs-accent">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700">
             <Link href="#waitlist">Join Waitlist</Link>
           </Button>
         </div>
@@ -64,28 +64,28 @@ const Header = () => {
           <nav className="flex flex-col space-y-4">
             <Link 
               href="#features" 
-              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              className="text-sm font-medium transition-colors hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </Link>
             <Link 
               href="#how-it-works" 
-              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              className="text-sm font-medium transition-colors hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               How It Works
             </Link>
             <Link 
               href="#pricing" 
-              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              className="text-sm font-medium transition-colors hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link 
               href="#" 
-              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              className="text-sm font-medium transition-colors hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Documentation
