@@ -15,7 +15,7 @@ export function HeroSectionDemo() {
           href: "#features",
         },
       }}
-      title="Supercharge Vibe Coding with Smart AI-Powered Documentation"
+      title="Supercharge Your Vibe Coding with AI-Powered Documentation"
       description="Streamline your AI project documentation with ease. Generate PRDs, technical specs, and workflows automatically. Integrate seamlessly with your favorite AI coding tools."
       actions={[
         {
@@ -31,7 +31,7 @@ export function HeroSectionDemo() {
         },
       ]}
       image={{
-        src: "",
+        src: "/logo.png",
         alt: "Vibedocs AI Documentation Platform Preview",
         customComponent: <CustomDashboard />
       }}

@@ -7,6 +7,9 @@ import { ArrowRightIcon } from "lucide-react";
 import { Mockup, MockupFrame } from "./mockup";
 import { Glow } from "./glow";
 import { cn } from "@/lib/utils";
+import { Icons } from "./icons";
+import { MockDashboard } from "./mock-dashboard";
+import Image from "next/image";
 
 interface HeroAction {
   text: string;
@@ -43,7 +46,7 @@ export function HeroSection({
   return (
     <section
       className={cn(
-        "bg-background text-foreground",
+        "bg-background text-black",
         "py-12 sm:py-24 md:py-32 px-4",
         "fade-bottom overflow-hidden pb-0"
       )}
@@ -53,7 +56,7 @@ export function HeroSection({
           {/* Badge */}
           {badge && (
             <Badge variant="outline" className="animate-appear gap-2">
-              <span className="text-muted-foreground">{badge.text}</span>
+              <span className="text-gray-500">{badge.text}</span>
               <a href={badge.action.href} className="flex items-center gap-1">
                 {badge.action.text}
                 <ArrowRightIcon className="h-3 w-3" />
@@ -62,50 +65,37 @@ export function HeroSection({
           )}
 
           {/* Title */}
-          <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+          <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-gray-900 to-gray-500 bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
             {title}
           </h1>
 
           {/* Description */}
-          <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl">
+          <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-gray-500 sm:text-xl">
             {description}
           </p>
 
           {/* Actions */}
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
-            {actions.map((action, index) => (
-              <Button key={index} variant={action.variant} size="lg" asChild>
-                <a href={action.href} className="flex items-center gap-2">
-                  {action.icon}
-                  {action.text}
-                </a>
-              </Button>
-            ))}
+          <div className="relative z-10 flex justify-center gap-4">
+            <Button variant="default" size="lg" asChild className="bg-black hover:bg-gray-800 text-white">
+              <a href="#waitlist" className="flex items-center gap-2">
+                Join Waitlist
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="border-0">
+              <a href="https://github.com/vibedocs" className="flex items-center gap-2">
+                <Icons.gitHub className="h-5 w-5" />
+                View on GitHub
+              </a>
+            </Button>
           </div>
 
           {/* Image with Glow */}
-          <div className="relative pt-12">
-            <MockupFrame
-              className="animate-appear opacity-0 delay-700"
-              size="small"
-            >
-              <Mockup type="responsive">
-                {image.customComponent ? (
-                  image.customComponent
-                ) : (
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    width={1248}
-                    height={765}
-                    className="w-full h-auto"
-                  />
-                )}
-              </Mockup>
-            </MockupFrame>
+          <div className="relative">
+            <Image src="/dashboard.png" alt="VibeDocs" width={1248} height={765} className="w-full h-auto border-2 border-gray-200 rounded-lg z-10"/>
+
             <Glow
               variant="top"
-              className="animate-appear-zoom opacity-0 delay-1000"
+              className="animate-appear-zoom z-0"
             />
           </div>
         </div>
