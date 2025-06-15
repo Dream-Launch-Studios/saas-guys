@@ -11,16 +11,16 @@ import { Button } from "@/components/ui/button";
 function FAQ() {
   const faqItems = [
     {
-      question: "What is CodeGuide and how does it help developers?",
-      answer: "CodeGuide is an AI-powered documentation assistant that streamlines the entire project planning process. It automatically generates key planning documents like PRDs, technical workflows, and design prompts, saving time and reducing errors. Think of it as your AI companion that helps you go from project conception to finished documentation."
+      question: "What is VibeDocs and how does it help developers?",
+      answer: "VibeDocs is an AI-powered documentation assistant that streamlines the entire project planning process. It automatically generates key planning documents like PRDs, technical workflows, and design prompts, saving time and reducing errors. Think of it as your AI companion that helps you go from project conception to finished documentation."
     },
     {
       question: "How does the AI Documentation Generator work?",
       answer: "Our AI Documentation Generator uses advanced LLMs (like OpenAI GPT, Anthropic Claude, or Google's Gemini) to create structured documents including PRDs, technical spec sheets, architecture diagrams, and user flows. It minimizes AI 'hallucinations' by cross-checking user inputs and generating consistent content."
     },
     {
-      question: "What AI tools does CodeGuide integrate with?",
-      answer: "CodeGuide integrates with popular AI development tools including Claude AI, Bolt, Lovable UI builder, VS Code + GitHub Copilot, Cursor, and Replit. The platform tailors outputs to these tools, providing optimized prompts and code snippets for your chosen environment."
+      question: "What AI tools does VibeDocs integrate with?",
+      answer: "VibeDocs integrates with popular AI development tools including Claude AI, Bolt, Lovable UI builder, VS Code + GitHub Copilot, Cursor, and Replit. The platform tailors outputs to these tools, providing optimized prompts and code snippets for your chosen environment."
     },
     {
       question: "What are Starter Kits and how do they help?",
@@ -57,12 +57,12 @@ function FAQ() {
                 <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
                   Your AI Documentation Companion
                 </h4>
-                <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
-                  Get answers to common questions about how CodeGuide can help streamline your project documentation process. From AI integration to export options, we've got you covered.
+                <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-400 text-left font-semithin">
+                  Get answers to common questions about how VibeDocs can help streamline your project documentation process. From AI integration to export options, we've got you covered.
                 </p>
               </div>
               <div className="">
-                <Button className="gap-4" variant="outline">
+                <Button className="gap-4 bg-black text-white hover:bg-gray-800" variant="outline">
                   Need more help? Contact us <PhoneCall className="w-4 h-4" />
                 </Button>
               </div>
@@ -70,11 +70,11 @@ function FAQ() {
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                <AccordionTrigger className="">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="text-gray-400 text-left font-semithin">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
