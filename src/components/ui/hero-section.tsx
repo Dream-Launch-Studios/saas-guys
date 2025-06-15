@@ -81,7 +81,7 @@ export function HeroSection({
                 Join Waitlist
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border-0">
+            <Button variant="outline" size="lg" asChild className="border-0 bg-white hover:bg-gray-100 text-black">
               <a href="https://github.com/vibedocs" className="flex items-center gap-2">
                 <Icons.gitHub className="h-5 w-5" />
                 View on GitHub
@@ -95,7 +95,7 @@ export function HeroSection({
 
             <Glow
               variant="top"
-              className="animate-appear-zoom z-0"
+              className="-z-10 opacity-50 -top-10"
             />
           </div>
         </div>

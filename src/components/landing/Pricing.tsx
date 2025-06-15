@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import Link from "next/link";
+import { FAQ } from "./Faq";
 
 const Pricing = () => {
   const starterFeatures = [
@@ -112,7 +113,7 @@ const Pricing = () => {
           </Card>
         </div>
         
-        <div className="max-w-3xl mx-auto mt-16 text-center">
+        {/* <div className="max-w-3xl mx-auto mt-16 text-center">
           <p className="text-sm text-gray-500 mb-8">
             Need a custom enterprise solution? <Link href="#" className="text-blue-600 underline">Contact us</Link> for pricing and features.
           </p>
@@ -138,10 +139,12 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <FAQ />
       </div>
     </section>
   );
 };
 
 export default Pricing;
+
