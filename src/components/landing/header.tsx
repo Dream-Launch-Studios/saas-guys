@@ -1,139 +1,105 @@
 "use client";
-import Image from "next/image";
-import Logo from "@/public/Link.png";
+
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import SoloLogo from "@/public/logo.png";
-import { motion } from "framer-motion";
-import { ItemVariants, LinksVariants, modalVariants } from "@/utils/variants";
+import { useState } from 'react';
+import Image from "next/image";
 
-export default function Header() {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showDownloadButton, setShowDownloadButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 400) {
-        // Assuming hero.tsx is around 500px from the top
-        setShowDownloadButton(true);
-      } else {
-        setShowDownloadButton(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 sm:w-full">
-      <div className="w-11/12 mx-auto px-4">
-        <div className="bg-white/40 backdrop-blur-md rounded-lg border border-rose-gold-300/20">
-          <motion.div className="flex justify-between items-center h-14 px-4">
-            <Link
-              href="/"
-              className="flex items-center space-x-2"
-            >
-              <button className="bg-gradient-to-r from-blue-400 to-blue-700 text-white font-bold text-2xl px-3 py-1 rounded-lg">
-                V
-              </button>
-              <text className="text-clip bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent text-2xl font-bold px-2">
-                VibeDocs
-              </text>
+    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
+            <Image 
+              src="/logo.png" 
+              alt="Vibedocs Logo" 
+              width={32}
+              height={32}
+            />
+            <span className="font-bold text-xl">Vibedocs</span>
+          </Link>
+          
+          <nav className="hidden md:flex items-center space-x-6 ml-10">
+            <Link href="#features" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+              Features
             </Link>
-
-            <button
-              className="xl:hidden p-2 text-rose-gold-200 hover:text-rose-gold-100 transition-all"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-
-            <motion.div
-              variants={LinksVariants}
-              className="hidden xl:flex items-center space-x-8"
-            >
-              {showDownloadButton && (
-                <button className="bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue-500 hover:to-blue-800 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
-                  Get Started Free
-                </button>
-              )}
-              <a
-                href="#features"
-                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
-              >
-                Features
-              </a>
-              <a
-                href="#pricing"
-                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
-              >
-                Pricing
-              </a>
-              <a
-                href="#testimonials"
-                className="text-rose-gold-200 hover:text-rose-gold-100 transition-colors"
-              >
-                Testimonials
-              </a>
-            </motion.div>
-          </motion.div>
-
-          {isMenuOpen && (
-            <motion.div
-              variants={modalVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="xl:hidden border-t border-rose-gold-300/20 py-4 px-4 space-y-4 h-96 flex items-center flex-col justify-center"
-            >
-              <motion.div
-                className="space-y-4"
-                variants={LinksVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              >
-                <motion.a
-                  variants={ItemVariants}
-                  href="#features"
-                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
-                >
-                  Features
-                </motion.a>
-                <motion.a
-                  variants={ItemVariants}
-                  href="#pricing"
-                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
-                >
-                  Pricing
-                </motion.a>
-                <motion.a
-                  variants={ItemVariants}
-                  href="#testimonials"
-                  className="block text-rose-gold-200 hover:text-rose-gold-100 transition-colors text-xl text-center font-medium"
-                >
-                  Testimonials
-                </motion.a>
-              </motion.div>
-
-              {showDownloadButton && (
-                <button className="w-full bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue-500 hover:to-blue-800 text-white font-semibold p-1.5 px-6 rounded-lg text-center transition-all duration-300">
-                  Get Started Free
-                </button>
-              )}
-            </motion.div>
-          )}
+            <Link href="#how-it-works" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+              How It Works
+            </Link>
+            <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+              Pricing
+            </Link>
+            <Link href="#" className="text-sm font-medium transition-colors hover:text-vibedocs-primary">
+              Documentation
+            </Link>
+          </nav>
         </div>
+        
+        <div className="hidden md:flex items-center space-x-4">
+          <Button variant="ghost" asChild>
+            <Link href="#">Sign In</Link>
+          </Button>
+          <Button asChild className="bg-vibedocs-primary hover:bg-vibedocs-accent">
+            <Link href="#waitlist">Join Waitlist</Link>
+          </Button>
+        </div>
+        
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden flex items-center" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X /> : <Menu />}
+        </button>
       </div>
-    </nav>
+      
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="md:hidden p-4 pt-2 pb-6 border-b bg-background">
+          <nav className="flex flex-col space-y-4">
+            <Link 
+              href="#features" 
+              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Features
+            </Link>
+            <Link 
+              href="#how-it-works" 
+              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </Link>
+            <Link 
+              href="#pricing" 
+              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link 
+              href="#" 
+              className="text-sm font-medium transition-colors hover:text-vibedocs-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Documentation
+            </Link>
+            <div className="flex flex-col space-y-2 pt-2">
+              <Button variant="ghost" asChild className="justify-center">
+                <Link href="#">Sign In</Link>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
   );
-}
+};
+
+export default Header;

@@ -1,56 +1,72 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import { WobbleCard } from "@/components/wobble-card";
 
-export function Features() {
+import { FileText, Zap, Bot, Code, Database, Workflow } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
+const Features = () => {
+  const features = [
+    {
+      icon: <FileText className="h-6 w-6 text-vibedocs-primary" />,
+      title: "AI Documentation Generator",
+      description: "Automatically generate PRDs, technical specs, architecture diagrams, and user flows using advanced AI models."
+    },
+    {
+      icon: <Zap className="h-6 w-6 text-vibedocs-primary" />,
+      title: "Project Creation Wizard",
+      description: "Step-by-step guided setup that helps you define core features, goals, and requirements for any project."
+    },
+    {
+      icon: <Bot className="h-6 w-6 text-vibedocs-primary" />,
+      title: "AI Assistant (Codie)",
+      description: "Interactive chatbot powered by Gemini AI to answer questions, clarify requirements, and refine documents."
+    },
+    {
+      icon: <Code className="h-6 w-6 text-vibedocs-primary" />,
+      title: "AI Tools Integration",
+      description: "Seamless integration with Claude, GPT, Copilot, Cursor, and other popular AI development tools."
+    },
+    {
+      icon: <Database className="h-6 w-6 text-vibedocs-primary" />,
+      title: "Starter Kit Library",
+      description: "Pre-configured project templates with best practices for AI-assisted development across tech stacks."
+    },
+    {
+      icon: <Workflow className="h-6 w-6 text-vibedocs-primary" />,
+      title: "Smart Workflows",
+      description: "Optimized prompts and workflows that save API tokens while maintaining high-quality output."
+    }
+  ];
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
-      <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-blue-800 min-h-[500px] lg:min-h-[300px] bg-gray-900"
-        className=""
-      >
-        <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-blue-100">
-            AI-Powered Documentation Generation
+    <section id="features" className="py-16 md:py-24 bg-gray-50">
+      <div className="container">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center justify-center px-3 py-1 mb-4 text-sm rounded-full bg-vibedocs-primary/10 text-vibedocs-primary border border-vibedocs-primary/20">
+            Features
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
+            Everything you need for AI-powered development
           </h2>
-          <p className="mt-4 text-left text-base/6 text-gray-200">
-            Transform your project requirements into comprehensive documentation with our advanced AI assistant. Generate PRDs, technical specs, and more in minutes.
+          <p className="text-gray-600">
+            Vibedocs provides all the tools to streamline your project documentation and integrate seamlessly with AI coding tools.
           </p>
         </div>
-        <Image
-          src="https://code.visualstudio.com/assets/home/home-screenshot-copilot.png"
-          width={500}
-          height={500}
-          alt="VibeDocs AI Documentation"
-          className="absolute -right-4 lg:-right-[40%] filter -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gray-950">
-        <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-blue-100">
-          Smart Documentation Management
-        </h2>
-        <p className="mt-4 max-w-[26rem] text-left text-base/6 text-gray-200">
-          Organize and maintain your documentation with intelligent versioning, real-time collaboration, and automated updates. Keep your team in sync with the latest changes.
-        </p>
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] bg-gray-950">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-blue-100">
-            Intelligent Project Analysis
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-left text-base/6 text-gray-200">
-            Automatically analyze your project structure, dependencies, and requirements to generate accurate and comprehensive documentation that evolves with your codebase.
-          </p>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <Card key={index} className="border-0 shadow-md hover:shadow-xl transition-shadow bg-white">
+              <CardContent className="p-6">
+                <div className="h-12 w-12 rounded-lg bg-vibedocs-primary/10 flex items-center justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-        <Image
-          src="https://code.visualstudio.com/assets/home/swimlane-customized.png"
-          width={500}
-          height={500}
-          alt="VibeDocs Project Analysis"
-          className="absolute -right-5 md:-right-[50%] lg:-right-[2%] -bottom-5 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-    </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default Features;

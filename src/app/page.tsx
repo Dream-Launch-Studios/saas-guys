@@ -1,26 +1,30 @@
-import Footer from "@/components/landing/footer";
-import Header from "@/components/landing/header";
-import Hero from "@/components/landing/hero";
-import { ImageSlider } from "@/components/landing/mintlify";
-import ScrollZoom from "@/components/landing/scrollZoom";
-import Testimonials from "@/components/landing/testimonials";
-import { TimelineDemo } from "@/components/landing/timeline";
-import Waitlist from "@/components/landing/waitlist";
-import Workflows from "@/components/landing/workflows";
 
-export default function Home() {
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import Features from "@/components/landing/Features";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Testimonials from "@/components/landing/Testimonials";
+import Pricing from "@/components/landing/Pricing";
+import Waitlist from "@/components/landing/Waitlist";
+import Footer from "@/components/landing/Footer";
+
+const Index = () => {
   return (
-    <div className="flex flex-col bg-white items-center justify-center min-h-screen w-full md:space-y-4">
+    <div className="flex flex-col min-h-screen">
       <Header />
-
-      <Hero />
-      <ScrollZoom />
-      <TimelineDemo />
-      <Testimonials />
-      <Workflows />
-      <ImageSlider />
-      <Waitlist />
+      
+      <main className="flex-1">
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <Testimonials />
+        <Pricing />
+        <Waitlist />
+      </main>
+      
       <Footer />
     </div>
   );
-}
+};
+
+export default Index;
