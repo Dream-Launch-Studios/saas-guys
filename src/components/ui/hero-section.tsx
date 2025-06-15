@@ -4,19 +4,10 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRightIcon } from "lucide-react";
-import { Mockup, MockupFrame } from "./mockup";
 import { Glow } from "./glow";
 import { cn } from "@/lib/utils";
 import { Icons } from "./icons";
-import { MockDashboard } from "./mock-dashboard";
 import Image from "next/image";
-
-interface HeroAction {
-  text: string;
-  href: string;
-  icon?: React.ReactNode;
-  variant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
-}
 
 interface HeroProps {
   badge?: {
@@ -28,20 +19,12 @@ interface HeroProps {
   };
   title: string;
   description: string;
-  actions: HeroAction[];
-  image: {
-    src: string;
-    alt: string;
-    customComponent?: React.ReactNode;
-  };
 }
 
 export function HeroSection({
   badge,
   title,
-  description,
-  actions,
-  image,
+  description,  
 }: HeroProps) {
   return (
     <section

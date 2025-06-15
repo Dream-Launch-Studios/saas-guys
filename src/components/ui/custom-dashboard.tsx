@@ -2,14 +2,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  FileText, 
-  Users, 
-  Clock, 
-  Brain,
+import {
+  TrendingUp,
+  TrendingDown,
+  FileText,
+  Users, Brain,
   Plus,
   MoreHorizontal,
   User
