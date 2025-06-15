@@ -2,7 +2,7 @@ Product Requirements Document: AI Coding Documentation Platform
 Overview and Purpose
 This platform is an AI-powered documentation assistant for coding projects, especially those involving AI tools. It guides developers from project conception to finished documentation. The tool automatically generates key planning documents—Product Requirement Documents (PRDs), technical workflows, design prompts, etc.—saving time and reducing errors. In other words, it acts as an “AI companion” that streamlines the entire planning process. Users sign up (e.g. via Google) and then describe their project’s idea, features, and goals; the system then produces well-structured documents for that project. The purpose is to eliminate the manual effort of writing specs and to integrate smoothly with AI coding tools, ensuring every new project starts with a clear, comprehensive blueprint.
 User Personas
-AI Developer – A software engineer building applications with AI assistance. They need a fast way to define and document new projects, leveraging AI tools (like Copilot or Claude) effectively. CodeGuide explicitly targets “developers seeking a solution to streamline project documentation and integrate AI tools”. This persona values time-saving and clarity in project specs.
+AI Developer – A software engineer building applications with AI assistance. They need a fast way to define and document new projects, leveraging AI tools (like Copilot or Claude) effectively. vibedocs explicitly targets “developers seeking a solution to streamline project documentation and integrate AI tools”. This persona values time-saving and clarity in project specs.
 
 
 Technical Lead / Project Manager – Oversees development teams. They use the platform to generate or review project plans and PRDs. They need standardized, high-quality documentation to guide the team’s work and to ensure all project requirements are captured.
@@ -45,7 +45,7 @@ Documentation Editor and Export: After generation, users can view and edit each 
 User Profile & Subscription: Account management for individual users. This includes a profile page, subscription/billing information, API key management (if applicable), and usage history. The platform may offer tiered plans (free trial, monthly/annual premium) with features like unlimited projects or advanced AI models.
 
 
-Help and Onboarding: Contextual help tooltips, an FAQ section, and possibly a short tutorial or tour guiding new users through the steps. Since CodeGuide emphasizes quick onboarding (“Quick Sign-Up,” “Built for AI coding” steps), the platform should ensure new users can start their first project within minutes.
+Help and Onboarding: Contextual help tooltips, an FAQ section, and possibly a short tutorial or tour guiding new users through the steps. Since vibedocs emphasizes quick onboarding (“Quick Sign-Up,” “Built for AI coding” steps), the platform should ensure new users can start their first project within minutes.
 
 
 User Flows
@@ -101,7 +101,7 @@ Theme and Responsiveness: Employ a consistent color scheme (dark or light mode t
 
 
 Authentication and User Management
-OAuth Login: Support single-click sign-up/login via Google (and optionally GitHub or Microsoft). CodeGuide uses Google OAuth exclusively, but offering multiple providers increases flexibility. Using a service like Clerk or Auth0 simplifies implementation.
+OAuth Login: Support single-click sign-up/login via Google (and optionally GitHub or Microsoft). vibedocs uses Google OAuth exclusively, but offering multiple providers increases flexibility. Using a service like Clerk or Auth0 simplifies implementation.
 
 
 User Accounts: Each user has a profile with email, name, and preferences. They can change password (if they set one) or revoke connected accounts. A profile page shows plan status and billing info.
@@ -152,11 +152,11 @@ Support and Feedback: A console for viewing user feedback or support tickets. Ad
 
 
 Suggested Tech Stack
-Based on CodeGuide’s implementation and best practices for AI-driven web apps, we suggest:
+Based on vibedocs’s implementation and best practices for AI-driven web apps, we suggest:
 Frontend: Next.js 14 with React (App Router) for server-side rendering and fast static hosting. This allows easy integration of UI frameworks and performant loading. Use Tailwind CSS for styling and shadcn/ui (or another component library) for ready-made UI components.
 
 
-Authentication: Clerk as in CodeGuide’s starter template for user accounts and OAuth (supports Google, GitHub, etc.). Clerk simplifies user sessions and SSO flows.
+Authentication: Clerk as in vibedocs’s starter template for user accounts and OAuth (supports Google, GitHub, etc.). Clerk simplifies user sessions and SSO flows.
 
 
 Backend / API: Use Next.js API routes or a separate Node.js/Express server for business logic. The server will handle AI API calls (OpenAI/Gemini) and coordinate the documentation generation. This can be deployed on serverless functions (e.g. Vercel, AWS Lambda).
@@ -180,7 +180,7 @@ Payment: Use Stripe for subscription billing. Use its APIs to handle plan tiers,
 Analytics/Monitoring: Integrate a tool like Google Analytics or Amplitude for user behavior, and Sentry or LogRocket for error tracking. Monitor LLM usage costs via logs or Supabase analytics.
 
 
-All suggested technologies align with CodeGuide’s own stack (Next.js 14, Clerk, Supabase, Tailwind) as listed in their Starter Kit documentation. The LLM choices (Gemini, GPT, Claude) are driven by the platform’s focus on cutting-edge AI integration.
-Sources: CodeGuide documentation and reviews; CodeGuide Starter Kit repo; CodingMap.dev (reference UI flows).
+All suggested technologies align with vibedocs’s own stack (Next.js 14, Clerk, Supabase, Tailwind) as listed in their Starter Kit documentation. The LLM choices (Gemini, GPT, Claude) are driven by the platform’s focus on cutting-edge AI integration.
+Sources: vibedocs documentation and reviews; vibedocs Starter Kit repo; CodingMap.dev (reference UI flows).
 
 
