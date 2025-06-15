@@ -2,7 +2,6 @@ import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
-import Testimonials from "@/components/landing/Testimonials";
 import Pricing from "@/components/landing/Pricing";
 import Waitlist from "@/components/landing/waitlist";
 import Footer from "@/components/landing/Footer";

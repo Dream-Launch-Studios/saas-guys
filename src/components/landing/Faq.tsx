@@ -1,4 +1,4 @@
-import { Check, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -58,7 +58,7 @@ function FAQ() {
                   Your AI Documentation Companion
                 </h4>
                 <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-400 text-left font-semithin">
-                  Get answers to common questions about how VibeDocs can help streamline your project documentation process. From AI integration to export options, we've got you covered.
+                  Get answers to common questions about how VibeDocs can help streamline your project documentation process. From AI integration to export options, we&apos;ve got you covered.
                 </p>
               </div>
               <div className="">

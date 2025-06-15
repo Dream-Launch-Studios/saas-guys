@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {

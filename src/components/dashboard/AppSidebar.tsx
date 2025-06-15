@@ -3,14 +3,12 @@ import * as React from "react";
 import {
   AudioWaveform,
   BookOpen,
-  Bot,
-  Command,
-  Frame,
+  Bot, Frame,
   GalleryVerticalEnd,
   Map,
   PieChart,
   Settings2,
-  SquareTerminal,
+  SquareTerminal
 } from "lucide-react";
 
 import { NavMain } from "@/components/dashboard/NavMain";

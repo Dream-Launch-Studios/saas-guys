@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 const Testimonials = () => {
@@ -50,7 +49,7 @@ const Testimonials = () => {
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="italic text-gray-700">"{testimonial.content}"</p>
+              <p className="italic text-gray-700">&ldquo;{testimonial.content}&rdquo;</p>
               <div className="mt-4 flex">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg 

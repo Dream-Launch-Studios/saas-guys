@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { ChevronsUpDown, Plus } from "lucide-react";
 
@@ -40,13 +39,13 @@ export function TeamSwitcher({
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                {/* @ts-ignore */}
+                {/* @ts-expect-error - Logo is a valid React component */}
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                {/* @ts-ignore */}
+                {/* @ts-expect-error - Name is a valid string */}
                 <span className="truncate font-semibold">{activeTeam.name}</span>
-                {/* @ts-ignore */}
+                {/* @ts-expect-error - Plan is a valid string */}
                 <span className="truncate text-xs">{activeTeam.plan}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
@@ -68,7 +67,6 @@ export function TeamSwitcher({
                 className="gap-2 p-2"
               >
                 <div className="flex size-6 items-center justify-center rounded-sm border">
-                  {/* @ts-ignore */}
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}

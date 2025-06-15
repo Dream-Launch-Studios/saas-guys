@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Instagram, Clock, Bookmark } from "lucide-react";
 import TikTokIcon from "@/components/icons/TikTokIcon";
+import Image from 'next/image';
 
 const ContentArea = () => {
   const [posts] = useState([
@@ -57,10 +58,12 @@ const ContentArea = () => {
         {posts.map((post) => (
           <Card key={post.id} className="overflow-hidden group">
             <div className="relative aspect-square">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="w-full h-full object-cover"
+                width={400}
+                height={400}
               />
               <Button
                 variant="secondary"

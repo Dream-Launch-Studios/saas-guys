@@ -81,9 +81,9 @@ const Waitlist = () => {
               ) : (
                 <div className="text-center">
                   <CheckCircle className="h-12 w-12 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">You're on the list!</h3>
+                  <h3 className="text-xl font-semibold mb-2">You&apos;re on the list!</h3>
                   <p className="text-blue-100">
-                    We'll notify you as soon as Vibedocs is ready. Thanks for joining!
+                    We&apos;ll notify you as soon as Vibedocs is ready. Thanks for joining!
                   </p>
                 </div>
               )}

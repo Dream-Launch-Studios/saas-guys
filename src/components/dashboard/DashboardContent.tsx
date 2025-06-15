@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Clock, FileText, Zap, TrendingUp, Plus, Sparkles, BookOpen, Users, Settings, Target } from "lucide-react";
+import { Clock, FileText, TrendingUp, Plus, Sparkles, BookOpen } from "lucide-react";
 
 const DashboardContent = () => {
   return (
